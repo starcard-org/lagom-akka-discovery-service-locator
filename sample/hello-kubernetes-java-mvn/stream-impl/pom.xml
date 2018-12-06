@@ -57,7 +57,18 @@
             <groupId>com.lightbend.akka.discovery</groupId>
             <artifactId>akka-discovery-dns_${scala.binary.version}</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-core_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-spray-json_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http_${scala.binary.version}</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

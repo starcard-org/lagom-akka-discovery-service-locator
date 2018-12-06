@@ -103,20 +103,36 @@
             <dependency>
                 <groupId>com.lightbend.akka.discovery</groupId>
                 <artifactId>akka-discovery-dns_${scala.binary.version}</artifactId>
-                <version>${akka.management}</version>
+                <version>${akka.management.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-http-core_${scala.binary.version}</artifactId>
+                <version>${akka.http.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-http-spray-json_${scala.binary.version}</artifactId>
+                <version>${akka.http.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-http_${scala.binary.version}</artifactId>
+                <version>${akka.http.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.lightbend.lagom</groupId>
                 <artifactId>service-locator-akka-discovery_${scala.binary.version}</artifactId>
-                <version>0.0.3</version>
+                <version>0.0.4</version>
             </dependency>
 
         </dependencies>
     </dependencyManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <lagom.version>1.5.0-M3</lagom.version>
+        <lagom.version>1.5.0-RC1</lagom.version>
         <scala.binary.version>2.12</scala.binary.version>
-        <akka.management>0.18.0</akka.management>
+        <akka.management.version>0.18.0</akka.management.version>
+        <akka.http.version>10.1.5</akka.http.version>
     </properties>
 </project>

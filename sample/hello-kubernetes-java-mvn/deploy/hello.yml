@@ -41,7 +41,8 @@ spec:
             initialDelaySeconds: 120
           env:
             - name: "APPLICATION_SECRET"
-              value: "change-this"
+              # change this to your own unique secret
+              value: "M5T/zBAqxiOcmHR1Ak2xjUNKvomQV6eD1XUTpvPpNkI="
             - name: "JAVA_OPTS"
               value: "-Xms128m -Xmx256m -Dconfig.resource=prod-application.conf -DCASSANDRA_SERVICE_NAME=_cql._tcp.reactive-sandbox-cassandra.default.svc.cluster.local -DKAFKA_SERVICE_NAME=_broker._tcp.reactive-sandbox-kafka.default.svc.cluster.local -Dplay.http.secret.key=$(APPLICATION_SECRET)"
           ports:
