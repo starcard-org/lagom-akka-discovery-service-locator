@@ -25,7 +25,7 @@ val commonSettings = Seq(
 lazy val root = (project in file("."))
   .disablePlugins(BintrayPlugin)
   .settings(
-    name := "lagom-akka-discovery-root"
+    name := "lagom-akka-discovery-service-locator-root"
   )
   .aggregate(serviceLocatorCore, serviceLocatorJavadsl, serviceLocatorScaladsl)
 
@@ -33,7 +33,7 @@ lazy val serviceLocatorCore = (project in file("service-locator/core"))
   .disablePlugins(BintrayPlugin)
   .settings(commonSettings)
   .settings(
-    name := "lagom-akka-service-locator-core",
+    name := "lagom-akka-discovery-service-locator-core",
     libraryDependencies ++= Dependencies.serviceLocatorCore
   )
 
@@ -41,7 +41,7 @@ lazy val serviceLocatorJavadsl = (project in file("service-locator/javadsl"))
   .disablePlugins(BintrayPlugin)
   .settings(commonSettings)
   .settings(
-    name := "lagom-javadsl-akka-service-locator",
+    name := "lagom-javadsl-akka-discovery-service-locator",
     libraryDependencies ++= Dependencies.serviceLocatorJavadsl
   ).dependsOn(serviceLocatorCore)
 
@@ -49,7 +49,7 @@ lazy val serviceLocatorScaladsl = (project in file("service-locator/scaladsl"))
   .disablePlugins(BintrayPlugin)
   .settings(commonSettings)
   .settings(
-    name := "lagom-scaladsl-akka-service-locator",
+    name := "lagom-scaladsl-akka-discovery-service-locator",
     libraryDependencies ++= Dependencies.serviceLocatorScaladsl
   ).dependsOn(serviceLocatorCore)
 
